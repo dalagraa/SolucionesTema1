@@ -279,7 +279,7 @@ hist(c52$VitC, breaks =20)
 #Diagrama de dispersión global.
 plot(whiteside$Temp, whiteside$Gas)
 #Diagrama de dispersión etiquetando según un factor.
-plot(whiteside$Temp, whiteside$Gas, pch=c(6,16)[whiteside\$Insul])
+plot(whiteside$Temp, whiteside$Gas, pch=c(6,16)[whiteside$Insul])
 legend(x="topright",legend=c("Insul = Before","Insul = After"), pch=c(6,16))
 # Planteamos 2 modelos lineales, uno para los datos de cada factor
 Model1 <- lm(Gas ~ Temp, data = whiteside, subset = which(Insul == "Before"))
@@ -291,7 +291,15 @@ abline(Model2)
 
 ```{r,echo=T,include=T,eval=F}
 
-
+#Diagrama de dispersión global.
+plot(cabbages$VitC, cabbages$HeadWt)
+#Diagrama de dispersión etiquetando según un factor.
+# Planteamos 2 modelos lineales, uno para los datos de cada factor
+Model1 <- lm(cabbages$Headwt ~ cabbages$VitC, data = cabbages )
+Model2 <- lm(cabbages$Headwt ~ cabbages$VitC, data = cabbages)
+# Representamos las rectas correspondientes a cada modelo lineal
+abline(Model1, lty=2)
+abline(Model2)
 
 
 
