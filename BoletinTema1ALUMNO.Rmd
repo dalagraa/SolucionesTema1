@@ -131,8 +131,8 @@ d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los 
 ```{r}
 
 
-
-
+commonAnimals <- intersect(rownames(a),rownames(b))
+commonAnimals
 
 
 ```
