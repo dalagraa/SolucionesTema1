@@ -197,30 +197,55 @@ head(libReturn,5)
     d.  Utiliza la función **summary**, sobre **cabbages** y **Chile** y observa como, además de otros estadísticos, también devuelve el número de valores perdidos de cada variable.
 
 ```{r}
+r <- cabbages
+ncol(r) #4 variables
+nrow(r) #60 Registros
+str(r)
+summary(r)
+#Factor, factor, num e int
+
+a<- is.na(r$Cult)
+b <- is.na(r$Date)
+c <- is.na(r$HeadWt)
+d <- is.na(r$VitC)
+cuantosNaa <- 0
+for (i in 1:nrow(r)){
+  if (a[i]== TRUE){
+    cuantosNaa <- cuantosNaa +1
+  }
+}
+cuantosNaa #0 Nas en cult
+
+cuantosNab <- 0
+for (i in 1:nrow(r)){
+  if (b[i]== TRUE){
+    cuantosNab <- cuantosNab +1
+  }
+}
+cuantosNab 
+
+cuantosNac <- 0
+for (i in 1:nrow(r)){
+  if (a[i]== TRUE){
+    cuantosNac <- cuantosNac +1
+  }
+}
+cuantosNac
+
+cuantosNad <- 0
+for (i in 1:nrow(r)){
+  if (d[i]== TRUE){
+    cuantosNad <- cuantosNad +1
+  }
+}
+cuantosNad
 
 
+#No hay NA en ningun lado
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+r<- Chile
+str(r) #2700 registros de  8 variables
+summary(r) #Hay 1 NA en age, 11 en education, 98 en incomes. 17 en statusquo y 168 en vote
 
 
 
