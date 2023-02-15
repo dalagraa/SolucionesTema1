@@ -142,9 +142,9 @@ e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. �
 ```{r}
 
 
-
-
-
+distintos <- setdiff(rownames(a),rownames(b))
+distintos
+#Hay 4 animales que no están en ambos conjuntos: "Arctic fox" "Arctic ground squirrel" "Patas monkey" "Mole rat"   
 
 ```
 
