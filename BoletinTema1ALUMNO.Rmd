@@ -256,9 +256,9 @@ summary(r) #Hay 1 NA en age, 11 en education, 98 en incomes. 17 en statusquo y 1
 ```{r}
 
 
-
-
-
+grafico <- qqPlot(cabbages$HeadWt)
+grafico <- qqPlot(cabbages$VitC)
+#Lo verifican
 ```
 
 6.  Una representación habitual, para determinar la distribución de los datos de una variable cuantitativa es el histograma (**hist**). Determina, de forma aproximada, utilizando el histograma, si hay diferencias entre los contenidos de vitamina C (**VitC**), para las diferentes variedades de calabaza (variable **Cult**), en el conjunto de datos **cabbages**.
