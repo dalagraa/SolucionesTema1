@@ -99,15 +99,24 @@ c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
 
 ```{r}
 
-
-
-
-
-
-
-
-
-
+help(mammals)
+help("Animals2")
+ #Para mammals
+dim(a)
+head(a)
+str(a)
+tail(a)
+#Para ANimals2
+dim(b)
+head(b)
+str(b)
+tail(b)
+#Para mammals
+rownames(a)
+colnames(a)
+#Para ANimals2
+rownames(b)
+colnames(b)
 
 
 
