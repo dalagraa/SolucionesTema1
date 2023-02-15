@@ -84,6 +84,12 @@ package.check <- lapply(packages, FUN = function(x) {
 ```
 
 1.  Considera los conjuntos de datos **mammals** del paquete **MASS** y **Animals2** del paquete **robustbase**.
+```{r}
+library("MASS")
+library("robustbase")
+a <- mammals
+b <- Animals2
+```
 
 <!-- -->
 
